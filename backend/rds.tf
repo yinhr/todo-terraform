@@ -31,7 +31,7 @@ resource "aws_db_instance" "tododot" {
   kms_key_id                 = aws_kms_key.tododot.arn
   username                   = "tmp"
   password                   = "tmp"
-  multi_az                   = false
+  multi_az                   = true
   backup_window              = "09:10-09:40"
   backup_retention_period    = 2
   maintenance_window         = "mon:10:10-mon:10:40"

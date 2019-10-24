@@ -29,8 +29,8 @@ resource "aws_db_instance" "tododot" {
   storage_type               = "gp2"
   storage_encrypted          = true
   kms_key_id                 = aws_kms_key.tododot.arn
-  username                   = "docker"
-  password                   = "ppaasssswwoorrdd"
+  username                   = "tmp"
+  password                   = "tmp"
   multi_az                   = false
   backup_window              = "09:10-09:40"
   backup_retention_period    = 2

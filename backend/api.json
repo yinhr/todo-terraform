@@ -1,0 +1,74 @@
+[
+  {
+    "name": "tododot-api",
+    "image": "858319333979.dkr.ecr.ap-northeast-1.amazonaws.com/tododot-api:2e98306c43d7b4c31b055e12339980ce7396ea56",
+    "essential": true,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-stream-prefix": "api",
+        "awslogs-group": "/ecs/tododot"
+      }
+    },
+    "secrets": [
+      {
+        "name": "GO111MODULE",
+        "valueFrom": "/tododot/go111module"
+      },
+      {
+        "name": "ECHO_ENV",
+        "valueFrom": "/tododot/echoenv"
+      },
+      {
+        "name": "DBHOST",
+        "valueFrom": "/db/host"
+      },
+      {
+        "name": "DBPORT",
+        "valueFrom": "/db/port"
+      },
+      {
+        "name": "DBNAME",
+        "valueFrom": "/db/name"
+      },
+      {
+        "name": "DBUSER",
+        "valueFrom": "/db/user"
+      },
+      {
+        "name": "DBPASS",
+        "valueFrom": "/db/password"
+      },
+      {
+        "name": "REDISHOST",
+        "valueFrom": "/redis/host"
+      },
+      {
+        "name": "REDISPORT",
+        "valueFrom": "/redis/port"
+      },
+      {
+        "name": "REDISPASS",
+        "valueFrom": "/redis/password"
+      }
+    ],
+    "portMappings": [
+      {
+        "protocol": "tcp",
+        "containerPort": 4000,
+        "hostPort": 4000
+      }
+    ],
+    "healthCheck": {
+      "command": [
+        "CMD-SHELL",
+        "curl -f http://localhost:4000/healthcheck || exit 1"
+      ],
+      "interval": 300,
+      "retries": 3,
+      "startPeriod": 60,
+      "timeout": 5
+    }
+  }
+]

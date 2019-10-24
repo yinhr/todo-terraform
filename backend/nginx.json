@@ -1,0 +1,22 @@
+[
+  {
+    "name": "tododot-nginx",
+    "image": "858319333979.dkr.ecr.ap-northeast-1.amazonaws.com/tododot-nginx:eab949514ec1b158ae7586830c203c2318eb48f7",
+    "essential": true,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-stream-prefix": "nginx",
+        "awslogs-group": "/ecs/tododot"
+      }
+    },
+    "portMappings": [
+      {
+        "protocol": "tcp",
+        "containerPort": 8000,
+        "hostPort": 8000
+      }
+    ]
+  }
+]

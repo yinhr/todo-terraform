@@ -35,7 +35,7 @@ resource "aws_ssm_parameter" "dbhost" {
 # change parameter value with aws-cli before deployment
 resource "aws_ssm_parameter" "dbport" {
   name        = "/db/port"
-  value       = "3306"
+  value       = "tmp"
   type        = "SecureString"
   description = "database port"
 
@@ -47,7 +47,7 @@ resource "aws_ssm_parameter" "dbport" {
 # change parameter value with aws-cli before deployment
 resource "aws_ssm_parameter" "dbname" {
   name        = "/db/name"
-  value       = "tododot"
+  value       = "tmp"
   type        = "SecureString"
   description = "database name"
 
@@ -59,7 +59,7 @@ resource "aws_ssm_parameter" "dbname" {
 # change parameter value with aws-cli before deployment
 resource "aws_ssm_parameter" "dbuser" {
   name        = "/db/user"
-  value       = "docker"
+  value       = "tmp"
   type        = "SecureString"
   description = "database user"
 
@@ -71,7 +71,7 @@ resource "aws_ssm_parameter" "dbuser" {
 # change parameter value with aws-cli before deployment
 resource "aws_ssm_parameter" "dbpass" {
   name        = "/db/password"
-  value       = "ppaasssswwoorrdd"
+  value       = "tmp"
   type        = "SecureString"
   description = "database password"
 
@@ -83,7 +83,7 @@ resource "aws_ssm_parameter" "dbpass" {
 # change parameter value with aws-cli before deployment
 resource "aws_ssm_parameter" "redishost" {
   name        = "/redis/host"
-  value       = "tmp redis host"
+  value       = "tmp"
   type        = "SecureString"
   description = "redis host name"
 
@@ -95,7 +95,7 @@ resource "aws_ssm_parameter" "redishost" {
 # change parameter value with aws-cli before deployment
 resource "aws_ssm_parameter" "redisport" {
   name        = "/redis/port"
-  value       = "6379"
+  value       = "tmp"
   type        = "SecureString"
   description = "redis port"
 
@@ -107,7 +107,7 @@ resource "aws_ssm_parameter" "redisport" {
 # change parameter value with aws-cli before deployment
 resource "aws_ssm_parameter" "redispass" {
   name        = "/redis/password"
-  value       = "secret"
+  value       = "tmp"
   type        = "SecureString"
   description = "redis password"
 

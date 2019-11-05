@@ -2,7 +2,7 @@
 Terraformによるtodo管理アプリの本番稼働環境の定義
 
 ## Description
-バックエンド（[yinhr/todo-backend](https://github.com/yinhr/todo-backend), [yinhr/todo-nginx](https://github.com/yinhr/todo-nginx)）用の環境と、フロントエンド([yinhr/todo-client](https://github.com/yinhr/todo-frontend)）用の環境をそれぞれterraformにより定義。環境の全体構成は以下の「todo管理アプリについて」のAWSアプリ構成を参照
+バックエンド（[yinhr/todo-backend](https://github.com/yinhr/todo-backend), [yinhr/todo-nginx](https://github.com/yinhr/todo-nginx)）用の環境と、フロントエンド([yinhr/todo-client](https://github.com/yinhr/todo-frontend)）用の環境をそれぞれterraformにより定義。環境の全体構成は以下の「todo管理アプリについて」のアプリ構成を参照
 
 ## todo管理アプリ
 以下参照   
